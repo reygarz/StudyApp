@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<nav>
+    <a href="index.html">Расписание</a> |
+    <a href="notes.html">Заметки</a> |
+    <a href="deadlines.html">Дедлайны</a>
+</nav>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дедлайны и задания</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <h1>Дедлайны и задания</h1>
+    <input type="text" id="taskInput" placeholder="Название задания">
+    <input type="date" id="dateInput">
+    <button onclick="addDeadline()">Добавить</button>
+
+    <h2>Список заданий:</h2>
+    <div id="deadlines"></div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

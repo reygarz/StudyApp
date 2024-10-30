@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<nav>
+    <a href="index.html">Расписание</a> |
+    <a href="notes.html">Заметки</a> |
+    <a href="deadlines.html">Дедлайны</a>
+</nav>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заметки</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <h1>Заметки</h1>
+    <textarea id="noteInput" placeholder="Напишите свои заметки здесь..."></textarea>
+    <button onclick="saveNote()">Сохранить заметку</button>
+    <h2>Сохраненные заметки:</h2>
+    <div id="savedNotes"></div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
