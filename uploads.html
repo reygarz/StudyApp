@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прикрепленные файлы</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">Главная</a>
+        <a href="uploads.html">Файлы</a>   
+        <button onclick="logout()" class="btn logout-btn">Выйти</button>
+    </nav>
+
+    <div class="container">
+        <h1>Прикрепленные файлы</h1>
+        <input type="file" id="fileUpload" onchange="uploadFile(event)">
+        <div id="fileList" class="card">
+            <!-- Список загруженных файлов -->
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

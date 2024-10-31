@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конспект по нахождению функции h</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        
+nav {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #007acc;
+    font-weight: bold;
+    margin: 0 10px;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    color: #005999;
+}
+
+h1, h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #3a4e7a;
+    margin-bottom: 20px;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">Главная</a>
+        <a href="summaries.html">МОП</a> 
+        <a href="h.html">Нахождение h</a> 
+    </nav>
+    <h1>Нахождение функции h(x, y) = f(g(x, y), y)</h1>
+    <h2>Данные</h2>
+    <h3>Таблица истинности для функции f</h3>
+    <table>
+        <tr>
+            <th>x</th>
+            <th>y</th>
+            <th>f(x, y)</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    <h3>Таблица истинности для функции g</h3>
+    <table>
+        <tr>
+            <th>x</th>
+            <th>y</th>
+            <th>g(x, y)</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    <h2>Способ 1: Прямое подставление значений</h2>
+    <ol>
+        <li><strong>Для x = 0, y = 0:</strong>
+            <ul>
+                <li>g(0, 0) = 1</li>
+                <li>h(0, 0) = f(1, 0)</li>
+                <li>f(1, 0) = 1</li>
+                <li><strong>Итак, h(0, 0) = 1.</strong></li>
+            </ul>
+        </li>
+        <li><strong>Для x = 0, y = 1:</strong>
+            <ul>
+                <li>g(0, 1) = 0</li>
+                <li>h(0, 1) = f(0, 1)</li>
+                <li>f(0, 1) = 1</li>
+                <li><strong>Итак, h(0, 1) = 1.</strong></li>
+            </ul>
+        </li>
+        <li><strong>Для x = 1, y = 0:</strong>
+            <ul>
+                <li>g(1, 0) = 0</li>
+                <li>h(1, 0) = f(0, 0)</li>
+                <li>f(0, 0) = 1</li>
+                <li><strong>Итак, h(1, 0) = 1.</strong></li>
+            </ul>
+        </li>
+        <li><strong>Для x = 1, y = 1:</strong>
+            <ul>
+                <li>g(1, 1) = 0</li>
+                <li>h(1, 1) = f(0, 1)</li>
+                <li>f(0, 1) = 1</li>
+                <li><strong>Итак, h(1, 1) = 1.</strong></li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Итоговая таблица истинности для h</h3>
+    <table>
+        <tr>
+            <th>x</th>
+            <th>y</th>
+            <th>h(x, y)</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+    <p>Таким образом, для всех комбинаций: <strong>h(x, y) = 1</strong></p>
+
+    <h2>Способ 2: Алгебраические преобразования</h2>
+    <ol>
+        <li><strong>Выражение для g(x, y):</strong>
+            <p>Из таблицы истинности: g(x, y) = ¬x (где ¬ — логическое отрицание).</p>
+        </li>
+        <li><strong>Подставим g(x, y) в функцию h:</strong>
+            <p>h(x, y) = f(g(x, y), y) = f(¬x, y)</p>
+        </li><li><strong>Анализируем h(x, y):</strong>
+            <ul>
+                <li>Когда g(x, y) = 0 (т.е. x = 1):</li>
+                <ul>
+                    <li>h(1, y) = f(0, y)</li>
+                    <li>Из таблицы: f(0, 0) = 1 и f(0, 1) = 1</li>
+                    <li><strong>h(1, 0) = 1 и h(1, 1) = 1.</strong></li>
+                </ul>
+                <li>Когда g(x, y) = 1 (т.е. x = 0):</li>
+                <ul>
+                    <li>h(0, y) = f(1, y)</li>
+                    <li>Из таблицы: f(1, 0) = 1 и f(1, 1) = 0</li>
+                    <li><strong>h(0, 0) = 1 и h(0, 1) = 0.</strong></li>
+                </ul>
+            </ul>
+        </li>
+    </ol>
+    <h3>Заключение</h3>
+    <p>Таким образом, для всех комбинаций: <strong>h(x, y) = 1</strong></p>
+
+</body>
+</html>

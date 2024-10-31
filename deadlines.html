@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дедлайны</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <nav>
+        <nav class="navbar">
+            <a href="home.html">Главная</a>
+            <a href="deadlines.html">Дедлайны</a>
+            <button onclick="logout()" class="btn logout-btn">Выйти</button>
+    </nav>
+
+    <div class="container">
+        <h1>Дедлайны</h1>
+        <input type="text" id="taskInput" placeholder="Название задания">
+        <input type="date" id="dateInput">
+        <button onclick="addDeadline()">Добавить</button>
+
+        <h2>Список дедлайнов:</h2>
+        <div id="deadlines" class="card"></div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

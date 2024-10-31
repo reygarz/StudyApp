@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание и посещаемость</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+     <nav class="navbar">
+        <a href="home.html">Главная</a>
+        <a href="index.html">Расписание</a> 
+        <button onclick="logout()" class="btn logout-btn">Выйти</button>
+    </nav>
+
+    <div class="container">
+        <h1>Расписание занятий</h1>
+
+        <!-- Кнопка загрузки файла .ics -->
+        <input type="file" id="fileInput" accept=".ics" onchange="loadICSFile(event)">
+        
+        <div class="card" id="schedule">
+            <!-- Расписание будет добавлено с помощью JavaScript -->
+        </div>
+
+        <div class="report">
+            <h2>Отчет о посещаемости</h2>
+            <div id="attendanceReport">
+                <!-- Данные о пропусках будут добавлены через JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.0.2/ical.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
