@@ -1,10 +1,10 @@
 // Переменные для хранения данных
-//let schedule = JSON.parse(localStorage.getItem('schedule')) || [];
-//let notes = JSON.parse(localStorage.getItem('notes')) || [];
-//let deadlines = JSON.parse(localStorage.getItem('deadlines')) || [];
-//let homeworkList = JSON.parse(localStorage.getItem('homeworkList')) || [];
-//let fileUploads = JSON.parse(localStorage.getItem('fileUploads')) || [];
-// Firebase конфигурация
+let schedule = JSON.parse(localStorage.getItem('schedule')) || [];
+let notes = JSON.parse(localStorage.getItem('notes')) || [];
+let deadlines = JSON.parse(localStorage.getItem('deadlines')) || [];
+let homeworkList = JSON.parse(localStorage.getItem('homeworkList')) || [];
+let fileUploads = JSON.parse(localStorage.getItem('fileUploads')) || [];
+//Firebase конфигурация
 
 const firebaseConfig = {
     apiKey: "AIzaSyAdIR_sPi6D6EF01NzboTIOSuZ9AM_A9h0",
